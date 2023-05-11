@@ -52,7 +52,8 @@ function App() {
 
     function onSubmit(e: FormEvent) {
         e.preventDefault();
-        next();
+        if (!isLastStep) return next();
+        alert("form has been submitted!");
     }
     return (
         <div
