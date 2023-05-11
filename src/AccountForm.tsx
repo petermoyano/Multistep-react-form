@@ -1,7 +1,7 @@
 import { FormWrapper } from "./FormWrapper";
 
 type AccountData = {
-    mail: string;
+    email: string;
     password: string;
 };
 
@@ -10,7 +10,7 @@ type AccountFormProps = AccountData & {
 };
 
 export function AccountForm({
-    mail,
+    email,
     password,
     updateFields,
 }: AccountFormProps) {
@@ -21,8 +21,8 @@ export function AccountForm({
                 required
                 autoFocus
                 type="email"
-                value={mail}
-                onChange={(e) => updateFields({ mail: e.target.value })}
+                value={email}
+                onChange={(e) => updateFields({ email: e.target.value })}
             />
             <label>Password</label>
             <input
